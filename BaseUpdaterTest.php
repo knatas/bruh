@@ -3,7 +3,7 @@
 class BaseUpdaterTest extends BaseTestSetup
 {
 
-
+    private $em;
 
     protected function setUp() {
         parent::setUp();
