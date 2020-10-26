@@ -25,4 +25,17 @@ public static function assertEquals($expected, $actual, string $message = '', fl
         static::assertThat($actual, $constraint, $message);
     }
 
+public static function assertEqualsCanonicalizing($expected, $actual, string $message = ''): void
+    {
+        $constraint = new IsEqual(
+            $expected,
+            0.0,
+            10,
+            true,
+            false
+        );
+
+        static::assertThat($actual, $constraint, $message);
+    }
+
 }
